@@ -1,0 +1,140 @@
+
+        1. @Component
+            It is a class level annotation.
+            when we use this annotation to our application, Spring will do the following steps:
+
+            a. Find the class: Spring will scan the application to find the class with @Component annotation.
+            
+            b. create an object: Spring will then create an object(or "bean") of that class without writing extra code.
+
+            c. Handle dependencies: If the class need other object to work(like another bean or service) Spring will automatically provide those when it creates the object.
+
+            d. Inject the bean: Spring will also inject bean wherever its needed in your application.
+
+            //summary: kisi bhi class ke upper me @Component likh denge n to wo khud class ka object bna dega. 
+
+
+        --------Program 1---------------
+
+        //ProductlistApplication.java
+
+        package com.example.productlist;
+
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+        @SpringBootApplication
+        public class ProductlistApplication {
+
+	    public static void main(String[] args) {
+
+		    SpringApplication.run(ProductlistApplication.class, args);
+		    MyComponent myComponent=new MyComponent();              //Manually created object
+		    myComponent.getMesage();
+
+	        }
+        }
+
+
+        //MyComponent.java
+
+        package com.example.productlist;
+
+        public class MyComponent {
+            public MyComponent(){                           //constructor
+            System.out.println("Result from My Component");
+        }
+
+        public void getMesage(){
+            System.out.println("Result from Get Message");
+        }
+    }
+
+        //output=
+        Result from My Component
+        Result from Get Message
+
+
+        ------------Program 2------------
+
+        //ProductlistApplication.java
+
+        package com.example.productlist;
+
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+        @SpringBootApplication
+        public class ProductlistApplication {
+
+	    public static void main(String[] args) {
+
+		    SpringApplication.run(ProductlistApplication.class, args);	
+
+	    }
+    }
+
+        //MyComponent.java
+
+        package com.example.productlist;
+        import org.springframework.stereotype.Component;
+    
+        @Component                                            //create object using @Component 
+        public class MyComponent {
+        public MyComponent(){
+            System.out.println("Result from My Component");
+        }
+
+        public void getMesage(){
+            System.out.println("Result from Get Message");
+        }
+    }
+
+    //output=
+    Result from My Component
+
+    Yaha pe ye wala constructor tha to object create hote hi call ho gya h, lekin baaki ke function ko call karne ke liye extra likhna padega
+
+
+    //-----------------Program 3---------------------
+    
+    //Yaha pe jo object ke through jo function call karte h wo kaise likhte h
+
+
+    //ProductlistApplication.java
+
+    package com.example.productlist;
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+    @SpringBootApplication
+    public class ProductlistApplication {
+
+	public static void main(String[] args) {
+
+	    ApplicationContext context=SpringApplication.run(ProductlistApplication.class, args);   //ApplicationContext likhna padega
+	    MyComponent component=context.getBean(MyComponent.class);
+		    component.getMesage();                  //getMessage() wala function call kiye h, object to bna tha usi se function ko call kiye h      
+	    }   
+    }   
+
+    //MyComponent.java
+
+        package com.example.productlist;
+        import org.springframework.stereotype.Component;
+       
+        @Component
+        public class MyComponent {
+        public MyComponent(){
+            System.out.println("Result from My Component");
+        }
+
+        public void getMesage(){
+            System.out.println("Result from Get Message");
+        }
+    }
+
+    //output=
+    Result from My Component
+    Result from Get Message
