@@ -99,5 +99,36 @@ It is used to develop enterprise-level applications.
         6. @Service
         7. @Repository
 
+        //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download download, manage aur build process handle karta h.
+
+    pahle problem kya tha old Java Project me
+    Jar file manually download karo
+    project me add karo
+    version conflict handle karo
+
+    Maven kya karta h
+    Tum bas bolte ho ki mujhe spring Boot chahiye, Mujhe MySQL chahiye
+
+    Maven automatically
+    Internet se library download karta h
+    Project me add karta h
+    project build karta h
+    Heart of Maven is pom.xml
+
+    Maven kya kya handle karta h
+    Dependency management
+    project build
+    Compilation
+    Testing
+    Packaging(jar/war file)
+
+    //Gradle
+    Gradle bhi Maven jaisa build automation tool hai, lekin ye faster hota h aur scripting based configuration use karta h.
+
+    //Difference between Maven and Gradle
+
+    Maven is xml based and pom.xml
+    Gradle is Script based and build.gradle
+
 
 
