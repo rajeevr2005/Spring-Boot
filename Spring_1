@@ -10,8 +10,18 @@ It is used to develop enterprise-level applications.
         The IoC container manages the lifecycle and configuration of application objects(beans) making it easier to manage dependencies and object creation.
         Benefits: Loose Coupling, Testability, Reusability, Modular design
 
+    Inversion of control ek design principle hai, jisme object creation aur lifecycle ka control programmer se Spring Container ke paas chala jata h. Spring bolta h ki mai object create kar dunga.
+        Spring IoC Container
+        objects create karta h.
+        objects manage karta h.
+        Lifecycle control karta h.
+
     Feature 2. Dependency Injection(DI)
-        Dependency Injection is a way to inject the dependency rather than having to create or manage them explicitly. It is achieved through spring IoC container which is responsible for creating and managing objects known as beans.
+        Dependency Injection is a way to inject the dependency rather than having to create or manage them explicitly. 
+        It is achieved through spring IoC container which is responsible for creating and managing objects known as beans.
+        
+        Dependency Injection IoC ka implementation hai jisme Spring required dependencies automatically inject karta h 
+        instead of creating them using new keyword, which reduces tight coupling and makes application loosely coupled and easiest to test. 
 
 //Types of Dependency Injection in Spring
 
