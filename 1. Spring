@@ -3,7 +3,7 @@
 Spring is a lightweight and popular open-source java-based framework.
 Spring is developed by Rod Johnson in 2003.
 It is used to develop enterprise-level applications.
-<<<<<<< HEAD
+
 Official documentation of spring is spring.io.
 
 //Features of Spring framework
@@ -13,7 +13,7 @@ Official documentation of spring is spring.io.
         Benefits: Loose Coupling, Testability, Reusability, Modular design
 
         Inversion of control ek design principle hai, jisme object creation aur lifecycle ka control programmer se Spring Container ke paas chala jata h. Spring bolta h ki mai object create kar dunga.
-=======
+
 
 //Features of Spring framework
 
