@@ -117,13 +117,10 @@ Official documentation of spring is spring.io.
         6. @Service
         7. @Repository
 
-<<<<<<< HEAD
+
 
 
     //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download, manage aur build process handle karta h.
-=======
-        //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download download, manage aur build process handle karta h.
->>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95
 
     pahle problem kya tha old Java Project me
     Jar file manually download karo
@@ -152,11 +149,8 @@ Official documentation of spring is spring.io.
     //Difference between Maven and Gradle
 
     Maven is xml based and pom.xml
-<<<<<<< HEAD
-    Gradle is Script based and build.gradle
-=======
+
     Gradle is Script based and build.gradle
 
 
 
->>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95
