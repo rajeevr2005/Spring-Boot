@@ -1,0 +1,40 @@
+1. @Controller is a specialized version of @Component designed specificially for handling web requests in spring MVC.
+
+2. Spring automatically looks for mrthods in a @Controller annotated class maps HTTP requests to these methods
+(e.g., using @RequestMapping, @GetMapping, etc).
+
+3. It also handles view resolution (e.g., returning HTML Pages or templates).
+
+
+
+------------------------------------------------------------------------------
+
+
+@RestController
+
+1. It is a specialized version of @Controller designed for Restful web services.
+
+2. It combines the behaviour of @Controller and @ResponseBody
+
+3. You don't need to annotate each method with @ResponseBody to return data like JSON.
+
+4. use @RestController when building REST APIs that retuurn data(JSON, XML, etc) directly instead of views(HTML Pages).
+
+-----------------------------------------------------------------------------
+
+@Service
+
+1. @Service is a specialization of @Component
+2. It's intended to indicate that the class provides some business logic within the application.
+3. In short, using @Component instead of @Service will work the same, but it's more meaningful to use @Service to indicate that the class provides service or business logic.
+
+
+-----------------------------------------------------------------------------
+
+@Repository
+
+1. @Repository is a specialization of @Component intended specifically for data access layer(DAO) classes that interact with databases.
+
+2. Oone of the primary roles of @Repossitory is to provide a mechanism for translating database-related exceptions into Spring's DataAccessException hierarchy.
+
+3. It reduces the complexity of error handling and makes the codemore readable and maintainable.

@@ -1,0 +1,13 @@
+REST stands for Representational State Transfer.
+It is a way to implement communication between two apps.
+It's client-server communication model, stateless communication.
+It is idely used for building scalale and easy to maintain APIs.
+
+HTTP Methods
+
+1. Get : Retrieve data from the server(read).
+2. POST : Send data to the server to create a new resources.
+3. PUT : Update an existing resource with new data.
+4. DELETE : Remove a resource from the server.
+5. PATCH : Partially update an existing resources.
+

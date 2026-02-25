@@ -1,0 +1,67 @@
+@Bean is a method-level annotation
+
+In other words, without relying on Spring to automatically detect and create beans,we can:
+
+1. Explicitly create and configure beans by writing methods annotated with @Bean inside a class annotated with  @Configuration.
+
+2. Spring will automatically manage the lifecycle of these beans, inject them wherever needed, and handle dependencies between them.
+
+@Bean ka kaam hai method ke through object create karke Spring container me register karna.
+means object hm bnate h, aur Spring usko bean bna ke manage karta h.
+
+@Bean is used when we need  manual control over object creationor when the class cannot be modified.
+
+
+@Bean tab use hota h jab object ka creation hm control karna chahte h ya class hmari nhi hoti h.
+
+//------Program 1--------------
+
+//Student.java file
+
+    package com.example.demo;
+    
+    public class Student{
+        public void display(){
+            System.out.println("Student Bean Created Using @Bean");
+        }
+    } 
+
+
+// AppConfig.java
+
+    package com.example.demo;
+
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+
+    @Configuration
+    
+    public class AppConfig{
+        @Bean
+        pubblic Student student(){
+            return new Student();
+        }
+    }
+
+// DemoApplication.java
+
+    package com.example.demo;
+    import org.springframework.beans.factory.annotation.AutoWired;
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+    @SpringBootApplication
+
+    public class DemoApplication{
+        @Autowired 
+
+        Student student;
+
+        public static void main(String args[]){
+            var context=SpringApplication.run(DemoApplication.class, args[]);
+
+            DemoApplication app=context.getBean(DemoApplication.class);
+            app.studnet.display();
+            
+        }
+    }

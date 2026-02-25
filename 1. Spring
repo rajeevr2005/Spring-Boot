@@ -1,0 +1,131 @@
+-----------Spring-----------
+
+Spring is a lightweight and popular open-source java-based framework.
+Spring is developed by Rod Johnson in 2003.
+It is used to develop enterprise-level applications.
+Official documentation of spring is spring.io.
+
+//Features of Spring framework
+
+    Feature 1. Inversion of control(IoC) :- Principle
+        The IoC container manages the lifecycle and configuration of application objects(beans) making it easier to manage dependencies and object creation.
+        Benefits: Loose Coupling, Testability, Reusability, Modular design
+
+        Inversion of control ek design principle hai, jisme object creation aur lifecycle ka control programmer se Spring Container ke paas chala jata h. Spring bolta h ki mai object create kar dunga.
+        Spring IoC Container
+        objects create karta h.
+        objects manage karta h.
+        Lifecycle control karta h.
+
+    Feature 2. Dependency Injection(DI)     :-  Design Pattern
+        Dependency Injection is a way to inject the dependency rather than having to create or manage them explicitly. It is achieved through spring IoC container which is responsible for creating and managing objects known as beans.
+        Dependency Injection IoC ka implementation hai jisme Spring required dependencies automatically inject karta h instead of creating them using new keyword, which reduces tight coupling and makes application loosely coupled and easiest to test. 
+
+//Types of Dependency Injection in Spring
+
+    1. Constructor Injection
+        public class car{
+            private Engine engine;
+
+            @AutoWired
+
+            public car(Engine engine){
+                this.engine=engine;
+            }
+        }
+
+
+    2. Setter Injection
+
+        public class car{
+            private Engine engine;
+
+            @AutoWired
+            public void setEngine(Engine engine){
+                this.engine=engine;
+            }
+        }
+
+    3. Field Injection
+        
+        public class car{
+            @AutoWired
+
+            private Engine engine;
+        }
+
+    
+    //Summary
+    Ioc(Inversion of Control) is responsible for creating and managing beans.
+
+    DI(Dependency Injection) is responsible for Injecting and created beans into other beans where they are needed.
+
+
+    Feature 3. Aspect-Oriented Programming(AOP)
+        AOP helps separate cross-cutting concerns(like logging, transaction management,security) from business logic.It allows you to add additional behaviour to code without modifying the code itself.
+
+
+    Feature 4. Spring MVC
+        A framework for building web applications, Spring MVC follows the Model-View-Controller(MVC) design pattern.It simplifies the development of web application by providing an efficient way to handle HTTP requests and responses.
+
+    Feature 5. Transaction management   
+        Makes it easier to handle database transactions in our applications.By using Spring's transaction management abstarction, we can focus on our business logic without worrying about the complex details of transaction management. It simplifies the process, reduces boilerPlate code, and helps ensure that your transactions are handled consistently across your application.
+
+    Feature 6.
+        A powerful and customizable authentication and authorization framework, Spring security handles security concerns at all layers, from the web layer down to the method level.
+
+    Feature 7. Spring Boot
+        Spring Boot is a tool that simplifies the development of new Spring applications. It comes with embedded servers(like Tomcat), auto-configuration, and production ready features such as metrices and health checks.
+
+
+        //How to make folder of project
+        step 1. search spring initiliz
+        step 2. Project= Maven  Language=Java  Add dependency like web, lombok, dev tool,JPA, H2 project name=Productlist and then click ok
+        step 3. Open intellij ide and open folder productlist
+        step 4. go to src/main/java/com.example.productlist/
+        step 5. right side maven(m) click it, click on click and install.
+
+
+
+        //Spring Boot Annotations
+
+        1. @Component
+        2. @Bean
+        3. @Configuration
+        4. @Controller
+        5. @RestController
+        6. @Service
+        7. @Repository
+
+
+
+    //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download, manage aur build process handle karta h.
+
+    pahle problem kya tha old Java Project me
+    Jar file manually download karo
+    project me add karo
+    version conflict handle karo
+
+    Maven kya karta h
+    Tum bas bolte ho ki mujhe spring Boot chahiye, Mujhe MySQL chahiye
+
+    Maven automatically
+    Internet se library download karta h
+    Project me add karta h
+    project build karta h
+    Heart of Maven is pom.xml
+
+    Maven kya kya handle karta h
+    Dependency management
+    project build
+    Compilation
+    Testing
+    Packaging(jar/war file)
+
+    //Gradle
+    Gradle bhi Maven jaisa build automation tool hai, lekin ye faster hota h aur scripting based configuration use karta h.
+
+    //Difference between Maven and Gradle
+
+    Maven is xml based and pom.xml
+    Gradle is Script based and build.gradle
