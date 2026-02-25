@@ -3,6 +3,7 @@
 Spring is a lightweight and popular open-source java-based framework.
 Spring is developed by Rod Johnson in 2003.
 It is used to develop enterprise-level applications.
+<<<<<<< HEAD
 Official documentation of spring is spring.io.
 
 //Features of Spring framework
@@ -12,14 +13,33 @@ Official documentation of spring is spring.io.
         Benefits: Loose Coupling, Testability, Reusability, Modular design
 
         Inversion of control ek design principle hai, jisme object creation aur lifecycle ka control programmer se Spring Container ke paas chala jata h. Spring bolta h ki mai object create kar dunga.
+=======
+
+//Features of Spring framework
+
+    Feature 1. Inversion of control(IoC)
+        The IoC container manages the lifecycle and configuration of application objects(beans) making it easier to manage dependencies and object creation.
+        Benefits: Loose Coupling, Testability, Reusability, Modular design
+
+    Inversion of control ek design principle hai, jisme object creation aur lifecycle ka control programmer se Spring Container ke paas chala jata h. Spring bolta h ki mai object create kar dunga.
+>>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95
         Spring IoC Container
         objects create karta h.
         objects manage karta h.
         Lifecycle control karta h.
 
+<<<<<<< HEAD
     Feature 2. Dependency Injection(DI)     :-  Design Pattern
         Dependency Injection is a way to inject the dependency rather than having to create or manage them explicitly. It is achieved through spring IoC container which is responsible for creating and managing objects known as beans.
         Dependency Injection IoC ka implementation hai jisme Spring required dependencies automatically inject karta h instead of creating them using new keyword, which reduces tight coupling and makes application loosely coupled and easiest to test. 
+=======
+    Feature 2. Dependency Injection(DI)
+        Dependency Injection is a way to inject the dependency rather than having to create or manage them explicitly. 
+        It is achieved through spring IoC container which is responsible for creating and managing objects known as beans.
+        
+        Dependency Injection IoC ka implementation hai jisme Spring required dependencies automatically inject karta h 
+        instead of creating them using new keyword, which reduces tight coupling and makes application loosely coupled and easiest to test. 
+>>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95
 
 //Types of Dependency Injection in Spring
 
@@ -97,9 +117,13 @@ Official documentation of spring is spring.io.
         6. @Service
         7. @Repository
 
+<<<<<<< HEAD
 
 
     //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download, manage aur build process handle karta h.
+=======
+        //Maven ek build automation aur dependency management tool hai jo project ki required libraries ko automatically download download, manage aur build process handle karta h.
+>>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95
 
     pahle problem kya tha old Java Project me
     Jar file manually download karo
@@ -128,4 +152,11 @@ Official documentation of spring is spring.io.
     //Difference between Maven and Gradle
 
     Maven is xml based and pom.xml
+<<<<<<< HEAD
     Gradle is Script based and build.gradle
+=======
+    Gradle is Script based and build.gradle
+
+
+
+>>>>>>> 7ff1a7f322ee331514053f5e7a8c979d5fcc1e95

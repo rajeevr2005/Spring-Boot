@@ -11,8 +11,8 @@
 
             d. Inject the bean: Spring will also inject bean wherever its needed in your application.
 
-            @Component tab use hota h jab class hmari khud ki ho.
 
+            @Component tab use hota h jab class hmari khud ki ho.
             //summary: kisi bhi class ke upper me @Component likh denge n to wo khud class ka object bna dega. 
 
 
